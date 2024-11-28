@@ -5,6 +5,13 @@ VisualStudioVersion = 17.12.35521.163 d17.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "http-trigger-sample", "http-trigger-sample\http-trigger-sample.csproj", "{EC0F6282-B892-440B-BA34-9701A958A0F7}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Piplines", "Piplines", "{B671D90C-BE86-40E2-BA0E-87B5CB98674F}"
+	ProjectSection(SolutionItems) = preProject
+		azure-pipelines.yml = azure-pipelines.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{27EFF441-A3A2-4E25-889E-23C147316F58}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +25,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{EC0F6282-B892-440B-BA34-9701A958A0F7} = {27EFF441-A3A2-4E25-889E-23C147316F58}
 	EndGlobalSection
 EndGlobal
