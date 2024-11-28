@@ -17,8 +17,10 @@ namespace http_trigger_sample
         [Function("HttpExample")]
         public IActionResult Run([HttpTrigger(AuthorizationLevel.Anonymous, "get", "post")] HttpRequest req)
         {
+            string currentTime = DateTime.Now.ToString("h:mm:ss tt");
             _logger.LogInformation("C# HTTP trigger function processed a request.");
-            return new OkObjectResult("Welcome to Azure Functions!");
+            return new OkObjectResult("Welcome to Azure Functions!, current time is ");
+            //return new OkObjectResult("Welcome to Azure Functions!");
         }
     }
 }
