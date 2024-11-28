@@ -12,8 +12,17 @@ pool:
 steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
+  
 
 - script: |
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
+
+- task: AzureFunctionApp@2
+  inputs:
+    connectedServiceNameARM: 'Visual Studio Professional with MSDN(e52407f0-61b9-4713-baa6-5aae919d34f9)'
+    appType: 'functionApp'
+    appName: 'bsp-funapp'
+    package: '$(System.DefaultWorkingDirectory)/**/*.zip'
+    deploymentMethod: 'auto'
