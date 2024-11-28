@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "http_trigger_sample": {
+      "commandName": "Project",
+      "commandLineArgs": "--port 7118",
+      "launchBrowser": false
+    }
+  }
+}
